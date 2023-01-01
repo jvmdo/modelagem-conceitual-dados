@@ -1,0 +1,14 @@
+Modelagem Conceitual
+	É uma atividade de análise, não de projeto.
+
+Entidade Fraca
+	Uma entidade que é totalmente dependente de outra. Ela existe somente para essa outra entidade.
+	Não há um padrão para identificar tais entidades na UML. Uma convenção é o estereótipo <<weak>>.
+	Nesses casos, utiliza-se uma relação direcionada (-->) em que a seta aponta para a classe fraca.
+
+Associação Direcionada
+	Essa associação estabelece que a a entidade forte tem uma referência à classe fraca, ou seja,
+quando o objeto da classe forte for recuperado por uma query, a classe fraca é recuperada também. Porém,
+o contrário não acontece.
+	Ex.: Um cliente (forte) tem telefones (fraco). Quando um cliente é recuperado pelo sistema, seus
+telefones vêm junto. Porém, quando os telefones são recuperados, os clientes não acompanham a query.
